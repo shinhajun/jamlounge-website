@@ -1,4 +1,4 @@
-<template>
+<template> 메롱
     <section class="login-page">
       <h2>관리자 로그인</h2>
       <div class="login-form">
@@ -15,7 +15,7 @@
       </div>
     </section>
   </template>
-  
+
   <script>
   import { login } from '@/services/authService'
   import { useRouter } from 'vue-router'
@@ -28,7 +28,7 @@
       const email = ref('')
       const password = ref('')
       const errorMessage = ref('')
-  
+
       const handleLogin = async () => {
         errorMessage.value = ''
         try {
@@ -39,7 +39,7 @@
           errorMessage.value = '로그인 실패: ' + err.message
         }
       }
-  
+
       return {
         email,
         password,
@@ -49,7 +49,7 @@
     }
   }
   </script>
-  
+
   <style scoped>
   .login-page {
     padding: 40px;
@@ -66,4 +66,3 @@
     margin-top: 8px;
   }
   </style>
-  
