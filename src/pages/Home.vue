@@ -1,4 +1,4 @@
-<template> 메롱메롱
+<template>
   <!-- 전체 컨테이너 -->
   <div class="home-page">
 

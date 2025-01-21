@@ -1,4 +1,4 @@
-<template> 메롱메롱메롱
+<template>
     <v-container class="py-10">
       <h2 class="text-h4 mb-4" style="color: #c5a46d;">Internal Picture (Firestore + Storage)</h2>
       <p style="color: #f2f2e9;">

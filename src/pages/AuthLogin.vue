@@ -1,4 +1,4 @@
-<template> 매롱메롱
+<template>
     <section class="login-page">
       <h2>관리자 로그인</h2>
       <div class="login-form">
