@@ -1,10 +1,10 @@
-<template>
+<template> 메롱메롱메롱
     <v-container class="py-10">
       <h2 class="text-h4 mb-4" style="color: #c5a46d;">Internal Picture (Firestore + Storage)</h2>
       <p style="color: #f2f2e9;">
         잼라운지의 내부 분위기를 보여주는 여러 사진들입니다.
       </p>
-  
+
       <v-row class="mt-6">
         <v-col
           v-for="(pic, idx) in pictures"
@@ -22,17 +22,17 @@
       </v-row>
     </v-container>
   </template>
-  
+
   <script>
   import { ref, onMounted } from 'vue'
   import { db } from '@/services/firebase'
   import { onSnapshot, collection, query, orderBy } from 'firebase/firestore'
-  
+
   export default {
     name: 'InternalPicture',
     setup() {
       const pictures = ref([])
-  
+
       const fetchPictures = () => {
         const q = query(collection(db, 'internal_pictures'), orderBy('createdAt', 'desc'))
         onSnapshot(q, (snapshot) => {
@@ -42,19 +42,18 @@
           }))
         })
       }
-  
+
       onMounted(() => {
         fetchPictures()
       })
-  
+
       return {
         pictures
       }
     }
   }
   </script>
-  
+
   <style scoped>
   /* 필요 시 추가 스타일 */
   </style>
-  
