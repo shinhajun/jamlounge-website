@@ -1,4 +1,4 @@
-<template>
+<template> 메롱메롱
   <!-- 전체 컨테이너 -->
   <div class="home-page">
 
@@ -66,10 +66,10 @@
 </template>
 
 <script>
-/* 
+/*
   1) Router 이용해 “예약 바로가기”를 /reservation 라우트로 이동
   2) jamlounge.svg?raw 로 SVG 문자열 가져오기
-  3) onMounted 시 (or setInterval)로 .fin 클래스 반복 
+  3) onMounted 시 (or setInterval)로 .fin 클래스 반복
      → 대신 여기서는 CSS keyframes로 무한 반복을 구현
 */
 import { useRouter } from 'vue-router'
@@ -92,9 +92,9 @@ export default {
     const logoRef = ref(null)
 
     onMounted(() => {
-      // 만약 JS로 .fin 클래스를 붙이는 방식을 사용한다면 
+      // 만약 JS로 .fin 클래스를 붙이는 방식을 사용한다면
       // 아래 로직으로 일정 간격마다 재생 가능
-      // 
+      //
       // 다만 아래 CSS keyframe은 무한 반복하므로,
       // JS로 .fin 붙였다 떼는 과정은 필요 없음.
       //
@@ -149,8 +149,8 @@ export default {
   height: auto;
 }
 
-/* 
-   (가장 중요) 
+/*
+   (가장 중요)
    jamlounge.svg 파일의 각 <path>에 fill="none" stroke="..." 로 수정해야
    아래 라인드로잉 애니메이션이 보임.
    또한, 'class="path"'를 달아두면 선택에 편함.
@@ -164,9 +164,9 @@ export default {
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  /* 
-    dasharray/offset: 실제 경로 길이에 맞춰서. 
-    여기서는 임의로 3000 
+  /*
+    dasharray/offset: 실제 경로 길이에 맞춰서.
+    여기서는 임의로 3000
   */
   stroke-dasharray: 3000;
   stroke-dashoffset: 3000;
@@ -179,8 +179,8 @@ export default {
   animation: drawJam 6s ease-in-out infinite;
 }
 
-/* 
-   keyframes: 
+/*
+   keyframes:
    0% -> dashoffset = 3000 (보이지 않음)
    40% -> dashoffset = 0 (선 다 그려짐)
    60% -> dashoffset = 0 (머무름)
